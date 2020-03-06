@@ -1,0 +1,42 @@
+1>Add Details
+@PostMapping("/price-service/add/{priceEntity}")
+http://localhost:1999//price-service/add/{priceEntity}
+
+2>List All Prices Along with Product Id
+@GetMapping("/price-service/prices")
+http://localhost:1999/price-service/prices
+
+3>Retrive Partucular Products Price
+@GetMapping("/price-service/{productId}/{quantities}")
+http://localhost:1999/price-service/{productId}/{quantities}
+
+4>Fetch By Price Range
+@GetMapping("/price-service/between/{value1}/{value2}")
+http://localhost:1999/price-service/between/{value1}/{value2}
+
+5>Fetch From Min to Max
+@GetMapping("/price-service/mintomax")	
+http://localhost:1999/price-service/mintomax
+
+6>Fetch from Max to Min
+@GetMapping("/price-service/maxtomin")
+http://localhost:1999/price-service/maxtomin
+
+
+7>Update Details
+@PutMapping("/price-service/update/{productId}")
+http://localhost:1999/price-service/update/{productId}
+
+
+8>Delete By Price Id
+@DeleteMapping("/price-service/delete/{priceId}")
+http://localhost:1999/price-service/delete/{priceId}
+
+9>Delete By Price Id
+@DeleteMapping("/price-service/deleteByProdId/{priceId}")
+http://localhost:1999/price-service/deleteByProdId/{priceId}
+
+
+10>Convert The INR price to any Other Currency
+@RequestMapping("/price-service/convert/{price}/{currency}")
+http://localhost:1999/price-service/convert/{price}/{currency}
