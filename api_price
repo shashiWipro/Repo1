@@ -40,3 +40,120 @@ http://localhost:1999/price-service/deleteByProdId/{priceId}
 10>Convert The INR price to any Other Currency
 @RequestMapping("/price-service/convert/{price}/{currency}")
 http://localhost:1999/price-service/convert/{price}/{currency}
+
+
+
+
+
+
+http://localhost:1997/product-service/saveProduct/product
+
+
+
+
+
+*************************Implementation Phase Demo******************************************
+1>Testing Effective Price:
+http://localhost:1997/product-service/discount/Prod104/SUPER33
+
+2>Adding full product Details
+http://localhost:1997/product-service/saveProductDetails/compleateProduct
+
+Post:
+   {
+    "productId": "Prod665",
+    "productName": "EarPhone",
+    "productCategory": "Electronics",
+    "price": 1000,
+	"port": 0,
+	"priceId":67,
+	"id": 575,
+	"inventoryId": "Inv665",
+	"quantity": 6
+	}
+
+
+
+{
+    "productId": "Prod888",
+    "productName": "T-shirt",
+    "productCategory": "Faishen",
+    "price": 1150,
+	"port": 0,
+	"priceId":66,
+	"id": 585,
+	"inventoryId": "Inv777",
+	"quantity": 5
+	}
+	
+	
+3>Client Side Load Balancer Example Using Ribbon
+http://localhost:1997/product-service/Prod101/1
+
+
+
+
+4>Hystrix Example
+
+http://localhost:1997/product-service_hystrix/Prod101/1
+
+First Terminate all the depedent Service I.e Price Services(All Instance)
+
+
+
+5>Config Server
+
+Try Tu use Config Client Value Into One of the service bettr Fault tolrance Based on diffrent env
+
+->Using from Limit service now
+http://localhost:1997/product-service_hystrix_config/Prod101/1  (terminate the limit services and verify it will return data from config server)
+
+->willl utilize in same servive + From Remote repo
+
+
+
+http://localhost:1997/product-service_hystrix_config/Prod101/1
+http://localhost:1011/limit-service/product
+http://localhost:1011/limit
+http://localhost:8081/limit-service/dev
+http://localhost:1997/product-service/Prod101/1
+http://localhost:1997/product-service/discount/Prod104/SUPER33
+http://localhost:1995/promotion-service/all
+http://localhost:1997/product-service_hystrix/Prod101/1
+http://localhost:1995/h2-console/
+http://localhost:8761/
+
+
+
+     *************************************tomorrow backup the code  Swagger*************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
